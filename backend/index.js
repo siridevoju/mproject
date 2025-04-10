@@ -15,9 +15,15 @@ const io = connectToSocket(server);
 
 app.use(bodyParser.json());
 
-mongoose.connect('mongodb://localhost:27017/mini_proj1', { useNewUrlParser: true, useUnifiedTopology: true })
-    .then(() => console.log('MongoDB is connected'))
-    .catch(err => console.error('MongoDB connection error:', err));
+mongoose.connect('mongodb+srv://siridevoju:2eMjUHsaP29bkF@cluster0.yhwfbd9.mongodb.net/mini_proj?retryWrites=true&w=majority&appName=Cluster0', {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+}).then(() => {
+    console.log('Connected to MongoDB Atlas');
+}).catch((err) => {
+    console.error('Error connecting to MongoDB Atlas:', err.message);
+});
+
 
 // Import routes
 const authRoutes = require('./routes/authRoutes');
@@ -68,8 +74,8 @@ app.get("/api/payment/:paymentId", async (req, res) => {
     const { paymentId } = req.params;
 
     const razorpay = new Razorpay({
-        key_id: "rzp_test_GcZZFDPP0jHtC4",
-        key_secret: "6JdtQv2u7oUw7EWziYeyoewJ"
+        key_id: "rzp_test_u9Mtfwm5NxX0Yo",
+        key_secret: "2LbJnQ1o71BFGPr8DuccJBXK"
     });
 
     try {

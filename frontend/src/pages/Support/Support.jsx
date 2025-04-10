@@ -39,7 +39,7 @@ export default function SupportPage() {
     };
 
     try {
-      const response = await axios.post('/api/support', dataToSend);
+      const response = await axios.post('http://localhost:5000/api/support/', dataToSend);
       if (response.status === 200) {
         toast.success('Message sent successfully!');
         setFormData({

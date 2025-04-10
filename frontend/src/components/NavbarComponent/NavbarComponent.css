@@ -66,40 +66,10 @@ body {
     border-color: #FFA500;
     transform: scale(1.1);
 } */
-
-.login-button {
-    border: 2px solid #4F46E5;
-    /* Adds a violet border */
-    color: #4F46E5;
-    /* Sets the text color to violet */
-    background-color: transparent;
-    /* Ensures no background color */
-    padding: 5px 15px;
-    /* Adds padding */
-    border-radius: 20px;
-    /* Optional: rounded corners */
-    text-transform: uppercase;
-    /* Optional: makes the text uppercase */
-    font-weight: bold;
-    /* Optional: makes the text bold */
-    transition: border-color 0.3s ease-in-out;
-    /* Smooth transition for border color */
-}
-
-.login-button:hover {
-    border-color: #4F46E5;
-    /* Ensures border stays the same on hover */
-    color: #4F46E5;
-    /* Keeps text color violet on hover */
-    cursor: pointer;
-    /* Pointer cursor on hover */
-}
-
 a {
-    text-decoration: none !important;
-    color: inherit !important;
+  text-decoration: none !important;
+  color: inherit !important;
 }
-
-.profileEle {
+.profileEle{
     text-decoration: none !important;
 }

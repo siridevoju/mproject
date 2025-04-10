@@ -26,6 +26,7 @@ const CentralSchemes = () => {
                 </div>
             </div>
             <FooterComponent />
+            
         </div>
     );
 };
